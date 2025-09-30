@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>[Ram sagar] - Developer Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="{% url 'admin:index' %}">Admin</a>
+            <a href="/api/v1/items/">API</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate developer focused on building modern web applications using technologies like Django, DRF, and HTML/CSS/JS.</p>
+            <p>Check out my projects below!</p>
+        </section>
+
+        <section id="portfolio" class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Example Project 1</h3>
+                    <p>A description of your project and the main goal.</p>
+                    <p class="tech">Technologies: **Django, HTML, CSS**</p>
+                    <a href="#" target="_blank">View Live</a> | <a href="#" target="_blank">GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Example Project 2</h3>
+                    <p>A second impressive project showcasing different skills.</p>
+                    <p class="tech">Technologies: **DRF, JavaScript, PostgreSQL**</p>
+                    <a href="#" target="_blank">View Live</a> | <a href="#" target="_blank">GitHub</a>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
