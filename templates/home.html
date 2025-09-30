@@ -4,25 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio</title>
+    <title>{{ "Ram Sagar" }} - Developer Portfolio</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
-        <h1>[Ram sagar] - Developer Portfolio</h1>
+        <h1>Ram Sagar - Developer Portfolio</h1>
         <nav>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
             <a href="{% url 'admin:index' %}">Admin</a>
-            <a href="/api/v1/items/">API</a>
+            <a href="/api/portfolioview/">API</a>
         </nav>
     </header>
 
     <main>
         <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate developer focused on building modern web applications using technologies like Django, DRF, and HTML/CSS/JS.</p>
-            <p>Check out my projects below!</p>
+            <h2>About Me 👋</h2>
+            <p>I am a passionate Full-Stack Developer specializing in building robust and scalable web applications. With a focus on the **Django/DRF ecosystem** for the backend and modern JavaScript for the frontend, I turn complex ideas into clean, functional code. I thrive on solving problems and continuously learning new technologies.</p>
+            <p>Currently open to new challenges in web development. Let's build something great!</p>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Technical Skills ⚙️</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Python, Django, Django REST Framework (DRF)</li>
+                        <li>SQL (PostgreSQL, SQLite)</li>
+                        <li>API Design (RESTful)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>DOM Manipulation & Fetch API</li>
+                        <li>Basic React/Vue Concepts (Optional)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tools & DevOps</h3>
+                    <ul>
+                        <li>Git & GitHub/GitLab</li>
+                        <li>Docker (Basic)</li>
+                        <li>VS Code, Linux/Bash</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="portfolio" class="container">
@@ -45,7 +76,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2025 Ram Sagar. All rights reserved. Built with Django & DRF.</p>
     </footer>
+
+    <script src="{% static 'js/portfolio.js' %}"></script>
 </body>
 </html>
